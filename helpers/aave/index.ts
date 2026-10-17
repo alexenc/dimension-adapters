@@ -1474,6 +1474,20 @@ export const aaveProtocolConfigs: Record<string, { config: {[key: string]: AaveA
       },
     },
   },
+  'rnt-lend': {
+    config: {
+      [CHAIN.POLYGON]: {
+        start: '2025-01-01', // TODO(reental): set to the Pool deployment date
+        pools: [
+          {
+            version: 3,
+            lendingPoolProxy: '0x67dC8037Db6309Dd5571D82c65F5f593F7da1505',
+            dataProvider: '0x5542ac41138f6a52a13c644f1db56bada71a4021',
+          },
+        ],
+      },
+    },
+  },
 }
 
 const aaveProtocols = Object.fromEntries(
